@@ -1,0 +1,26 @@
+<div class="container"> 
+    <mat-card *ngFor="let product of products">
+      <mat-card-header>
+        <img
+          mat-card-image
+          src="{{ product.imageUrl }}"
+          alt="card-image"
+          class="img"
+        />
+      </mat-card-header>
+      <mat-card-title>
+        <div class="card-title">
+          <ng-container>
+            <span>{{ product.title }} </span>
+            <span>${{ product.price }} </span>
+          </ng-container>
+        </div>
+      </mat-card-title>
+      <mat-card-content>{{ product.description }}</mat-card-content>
+      <div class="button-container">
+        <button mat-raised-button color="primary" style="width: 15px;" (click)="this.product.quantity = this.product.quantity + 1">+</button>
+        <p>{{ product.quantity }}</p>
+        <button mat-raised-button color="warn" style="width: 15px;" (click)="this.product.quantity > 0 ? product.quantity = product.quantity - 1 :0">-</button>
+      </div>
+    </mat-card>
+  </div>

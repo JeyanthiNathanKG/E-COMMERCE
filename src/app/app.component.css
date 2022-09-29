@@ -1,0 +1,7 @@
+img{
+    height: 250px;
+    width: 100%;
+}
+.web{
+    height: calc(100%-70px);
+}
