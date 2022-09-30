@@ -12,6 +12,7 @@ export class CardComponent {
 
   products: any; 
   add: number = 0;
+  //DI
   constructor(service: CardItemsService) {
     this.products = service.getItems();
   }
